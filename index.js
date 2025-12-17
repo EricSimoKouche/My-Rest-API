@@ -27,6 +27,16 @@ app.get('/tshirt', (req, res) => {
     })
 });
 
+app.get('/users', (req, res) => {
+    
+    const { role, page } = req.query;
+    if (role != null && page != null) {
+        return res.status(200).send({role, page})
+    }
+    res.status(400).send("Incorrect HTTP request. Need an user role and page argument");
+    
+});
+
 
 // :id is a route params. it captures dynamic values in the URL.
 // in our case it will be the id of the tshirt
