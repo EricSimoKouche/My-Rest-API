@@ -8,6 +8,7 @@ const PORT = 8080;
 // then make thi json in our post callback handler
 app.use( express.json() )
 
+// this command launching our server on the port 8080
 app.listen(PORT, () => {
     console.log(`it's alive at on http://localhost:${PORT} `);
 });
